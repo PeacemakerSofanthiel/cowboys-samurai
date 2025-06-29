@@ -7,6 +7,8 @@ public class PlayerTilemapMover : BattleEntity, IBattleTickable
     public TileOwner playerOwner = TileOwner.Player;
     [HideInInspector]
     public Vector3 lastMoveDirection = Vector3.right;
+    public bool movementLocked = false;
+
 
     void Awake()
     {
@@ -25,7 +27,7 @@ public class PlayerTilemapMover : BattleEntity, IBattleTickable
     void Update()
     {
         Vector3Int nextCell = currentCell;
-
+        if (movementLocked) return;
         if (Input.GetKeyDown(KeyCode.UpArrow))  { nextCell += Vector3Int.up;    lastMoveDirection = Vector3.up; }
         if (Input.GetKeyDown(KeyCode.DownArrow)){ nextCell += Vector3Int.down;  lastMoveDirection = Vector3.down; }
         if (Input.GetKeyDown(KeyCode.LeftArrow)){ nextCell += Vector3Int.left;  lastMoveDirection = Vector3.left; }
@@ -44,7 +46,7 @@ public class PlayerTilemapMover : BattleEntity, IBattleTickable
 
     public void OnBattleTick()
     {
-        Debug.Log("Player ticked.");
+        //Debug.Log("Player ticked.");
     }
 }
 

@@ -709,6 +709,7 @@ GameObject:
   - component: {fileID: 1021504976}
   - component: {fileID: 1021504980}
   - component: {fileID: 1021504981}
+  - component: {fileID: 1021504982}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Player
@@ -731,6 +732,7 @@ MonoBehaviour:
   tilemap: {fileID: 440288374}
   currentCell: {x: 0, y: 0, z: 0}
   maxHP: 100
+  currentHP: 0
   startingCell: {x: 3, y: 2, z: 2}
 --- !u!212 &1021504978
 SpriteRenderer:
@@ -837,6 +839,27 @@ SortingGroup:
   m_SortingLayerID: 1518292223
   m_SortingLayer: 4
   m_SortingOrder: 0
+--- !u!50 &1021504982
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021504975}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1086727498
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +991,7 @@ MonoBehaviour:
   gridManager: {fileID: 808135270}
   playerOwner: 1
   lastMoveDirection: {x: 1, y: 0, z: 0}
+  movementLocked: 0
 --- !u!212 &1208006244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1093,7 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5747976557d1f740909c87f0b8fb73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equippedChip: {fileID: 11400000, guid: 1142ecb4a279a0f47b87f6b52388a4a3, type: 2}
+  equippedChip: {fileID: 11400000, guid: 9025abbdffa9c7c4abfbb2fa3992fd38, type: 2}
 --- !u!210 &1208006249
 SortingGroup:
   m_ObjectHideFlags: 0

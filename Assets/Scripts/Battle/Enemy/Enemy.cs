@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 public class Enemy : BattleEntity, IBattleTickable
 {
     public int maxHP = 10;
-    private int currentHP;
+    public int currentHP;
 
     public Vector3Int startingCell;
 
@@ -33,6 +33,6 @@ public class Enemy : BattleEntity, IBattleTickable
     {
         // This will be called by BattleManager every tick (e.g., every 0.1s)
         // It makes the enemy move, fire, or blink based on behavior
-        Debug.Log("Enemy tick update");
+        //Debug.Log("Enemy tick update");
     }
 }
