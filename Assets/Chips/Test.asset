@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2dc6643cd865546bdd4b77ba3f882e, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  chipName: Canon Ball
+  chipCode: A
+  type: 1
+  damage: 1
+  range: 10
+  cooldown: 1
+  icon: {fileID: 0}
+  chipPrefab: {fileID: 8862352828741781291, guid: 583c0b81443c2c2419365020c7b16d00, type: 3}

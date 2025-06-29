@@ -42,3 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1555645887
+    locked: 0
+  - name: Tilemap
+    uniqueID: 400533875
+    locked: 0
+  - name: Highlight map
+    uniqueID: 930314457
+    locked: 0
+  - name: Entity
+    uniqueID: 1518292223
+    locked: 0
+  - name: VFX
+    uniqueID: 800692421
+    locked: 0
+  - name: UI
+    uniqueID: 1292225491
+    locked: 0
