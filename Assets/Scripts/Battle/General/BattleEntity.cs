@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public abstract class BattleEntity : MonoBehaviour
+public abstract class BattleEntity : DamageableEntity
 {
     public Tilemap tilemap;
     public Vector3Int currentCell;

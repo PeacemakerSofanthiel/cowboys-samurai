@@ -3,9 +3,6 @@ using UnityEngine.Tilemaps;
 
 public class Enemy : BattleEntity, IBattleTickable
 {
-    public int maxHP = 10;
-    public int currentHP;
-
     public Vector3Int startingCell;
 
     protected override void Start()
