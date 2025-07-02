@@ -9,19 +9,30 @@ public enum TileOwner
     Enemy
 }
 
+public enum TileType
+{
+    Normal,
+    Obstacle,
+    Hole
+}
+
+
 public class TileState
 {
     public Vector3Int position;
     public TileBase baseTile;
     public TileOwner owner;
+    public TileType type;
 
-    public TileState(Vector3Int pos, TileBase tile, TileOwner tileOwner)
+    public TileState(Vector3Int pos, TileBase tile, TileOwner tileOwner, TileType tileType = TileType.Normal)
     {
         position = pos;
         baseTile = tile;
         owner = tileOwner;
+        type = tileType;
     }
 }
+
 
 public class GridManager : MonoBehaviour
 {
@@ -51,19 +62,27 @@ public class GridManager : MonoBehaviour
 
             if (tile is TaggedTile tagged)
             {
-                tileStates[pos] = new TileState(pos, tile, tagged.owner);
+                tileStates[pos] = new TileState(pos, tile, tagged.owner, tagged.type);
             }
         }
     }
 
     public bool IsWalkable(Vector3Int cell, TileOwner requester)
     {
-        if (!tileStates.ContainsKey(cell)) return false;
+        if (!tileStates.TryGetValue(cell, out TileState state)) return false;
 
-        TileState state = tileStates[cell];
+        if (state.type == TileType.Obstacle || state.type == TileType.Hole)
+            return false;
 
         return state.owner == TileOwner.Neutral || state.owner == requester;
     }
+
+    public void SetTileType(Vector3Int cell, TileType newType)
+    {
+        if (!tileStates.ContainsKey(cell)) return;
+        tileStates[cell].type = newType;
+    }
+
 
     public void StealTile(Vector3Int cell, TileOwner newOwner)
     {

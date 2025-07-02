@@ -30,5 +30,5 @@ public abstract class BattleEntity : DamageableEntity
         SnapToGrid(currentCell);
     }
 
-    public virtual void TakeDamage(int amount) { }
+    //public virtual void TakeDamage(int amount) { }
 }

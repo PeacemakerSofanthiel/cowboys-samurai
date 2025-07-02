@@ -20,11 +20,11 @@ public class Enemy : BattleEntity, IBattleTickable
         if (currentHP <= 0) Die();
     }
 
-    private void Die()
-    {
-        Debug.Log("Enemy died!");
-        Destroy(gameObject);
-    }
+    // private void Die()
+    // {
+    //     Debug.Log("Enemy died!");
+    //     Destroy(gameObject);
+    // }
 
     public void OnBattleTick()
     {

@@ -4,6 +4,6 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu(menuName = "Custom/Tagged Tile")]
 public class TaggedTile : Tile
 {
-    public bool isWalkable = true;
-    public TileOwner owner = TileOwner.Neutral;
+    public TileOwner owner;
+    public TileType type = TileType.Normal;
 }
