@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7e3641357bcfbc4ea3783941ee74a78, type: 3}
-  m_Name: StepSwordChip
+  m_Name: StepSunder1A
   m_EditorClassIdentifier: 
-  chipName: Step Wide Sword
+  chipName: StepSunder
   chipCode: A
   type: 2
-  damage: 80
+  damage: 60
   range: 2
   cooldown: 1
   icon: {fileID: 0}
   chipPrefab: {fileID: 0}
-  swordHitboxPrefab: {fileID: 8820179655715386556, guid: 24d2823158f710a4183340fbe6088a08, type: 3}
+  swordHitboxPrefab: {fileID: 8820179655715386556, guid: 9c168e5b844669a4696f936372eed671, type: 3}
   executionDelay: 0.2
